@@ -18,7 +18,17 @@ const CommentList = ({ comments }) => {
       <ul className="">
         {comments &&
           Object.values(comments).map((comment) => (
-            <li key={comment.id}>{comment.content}</li>
+            <li key={comment.id}>
+              {comment.status === "approved" ? (
+                comment.content
+              ) : comment.status === "pending" ? (
+                "This comment is awaiting moderation"
+              ) : (
+                <span style={{ color: "red" }}>
+                  This comment has been rejected{" "}
+                </span>
+              )}
+            </li>
           ))}
       </ul>
     </div>
