@@ -7,7 +7,7 @@ const CommentCreate = ({ id }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    await Axios.post(`http://localhost:4001/posts/${id}/comments`, {
+    await Axios.post(`http://posts.com/posts/${id}/comments`, {
       content: input,
     });
 

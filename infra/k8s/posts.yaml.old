@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posts
+spec:
+  containers:
+    - name: a
+      image: abbeyme/posts:0.0.1
+    - name: b
+      image: abbeyme/posts:0.0.1
+    - name: c
+      image: abbeyme/posts:0.0.1
